@@ -35,6 +35,51 @@
 			</div>
 		</div>
 
+		<div class="container" id="blog">
+			<h2>Blog Posts</h2>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card" style="width: 100%;">
+						<div class="card-body">
+							<h5 class="card-title">CS465 Final Project: Earthquake Mapper</h5>
+							<p class="card-text">
+								For the final project for CS465 I helped create a web app to allow users to see earthquakes from
+								around the world. We built the application using the <a href="https://reactjs.org/">ReactJs framework</a>. We also used components 
+								from <a href="https://material-ui.com/">Material-UI</a> and <a href="https://www.npmjs.com/package/google-map-react">google-maps-react</a>. APIs were provided by the 
+								<a href="https://www.usgs.gov/products/data-and-tools/apis">USGS</a> and the <a href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps Javascript API</a>. These pre-built components helped us quickly 
+								stand-up a webapp and allowed us to 
+								focus primarily on coding the actual functionality of the site. Often when I’m trying to work on a 
+								webpage my biggest complaint is styling and design, it’s something I haven’t invested enough time 
+								into yet. So I like that Material UI kind of takes care of most of that while allowing you to 
+								override their design and make your own changes as needed.
+								The first big issue I ran into was mentioned above, and it was just getting around styling material 
+								UI’s components. One fix was just changing the styles around those components to make them work. For
+								example, I couldn’t figure out how to make the radial buttons smaller so both groups would fit side 
+								by side within my side bar. So instead I just increased the size of the sidebar to fit them. Things 
+								such as this are a little hackey and probably poor practice, but were necessary given the time 
+								constraints. The next issue I ran into was just learning how to make async calls to reach out to 
+								the USGS API for earthquake data. I ended up using Axios because of its simplicity and then saving
+								the earthquake data to a local component’s state. This leads into the next issue. The app component 
+								has two children, the sidebar which initiates the call to get the earthquake data, and then the map 
+								component which actually displays the map. In order to get the earthquake data from the sidebar, I 
+								had to elevate state up to the app component so that it would be shared by both of the child components.
+								To do this, I also had to convert our app component from a function component to a class component so 
+								that it could maintain its own state. I think spending a little more time on the architecture in the 
+								beginning could have saved us a lot of time towards the end, but I also think the “development driven 
+								development” that we used was largely because we were both learning React as we went. 
+								All in all the project was pretty fun, and a good refresher / intro to React. I’d like to continue 
+								fleshing it out a bit. I’d like to change the styling to make it more mobile friendly first, right 
+								now it’s using some fixed widths. I’d also like to make it a little more reactive by giving the user 
+								more options for the data they wish to see on the map. It would be nice to let the user click on an 
+								earthquake they see on the side bar and have the map then center on that specific incident. Adding this 
+								clickable functionality to the map would also be an easy change. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="container" id="projects">
 				<h2>Current Project</h2>
 				<div class="row">
